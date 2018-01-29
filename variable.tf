@@ -18,23 +18,6 @@ variable "security_groups" {
   description = "List of SG for the launch config resource"
 }
 
-variable "key_name" {
-  description = "Name of the SSH key used to connect to the EC2 instance"
-}
-
-variable "ami_id" {
-  description = "Name of the AMI used by the launch config"
-}
-
-variable "instance_type" {
-  default     = "t2.micro"
-  description = "Size of the EC2 instances"
-}
-
-variable "user_data" {
-  description = "Inline user data for the EC2 instances"
-}
-
 variable "vpc_id" {
   description = "Main VPCs identifier"
 }
@@ -51,4 +34,12 @@ variable "protocol_type" {
 
 variable "instance_profile" {
   description = "Instance profile mapping for the launch configuration"
+}
+
+variable "launch_config" {
+  description = "Launch config resource ID"
+}
+
+variable "lb_type" {
+  description = "Switch between network and application"
 }
