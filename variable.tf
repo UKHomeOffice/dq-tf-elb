@@ -22,10 +22,6 @@ variable "vpc_id" {
   description = "Main VPCs identifier"
 }
 
-variable "instance_profile" {
-  description = "Instance profile mapping for the launch configuration"
-}
-
 variable "launch_config" {
   description = "Launch config resource ID"
 }
