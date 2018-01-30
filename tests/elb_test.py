@@ -24,7 +24,6 @@ class TestE2E(unittest.TestCase):
               vpc_id            = "vpc-abcd0123"
               subnet_list       = ["subnet-abcd0123"]
               security_groups   = ["sg-abcd1234"]
-              instance_profile  = "iip-assoc-00000011111111222"
               launch_config     = "test-lg-123456"
               TCPPorts          = ["443","135","1433"]
             }
