@@ -24,10 +24,9 @@ class TestE2E(unittest.TestCase):
               vpc_id            = "vpc-abcd0123"
               subnet_list       = ["subnet-abcd0123"]
               security_groups   = ["sg-abcd1234"]
-              protocol_type     = "HTTPS"
               instance_profile  = "iip-assoc-00000011111111222"
               launch_config     = "test-lg-123456"
-              lb_type           = "network"
+              TCPPorts          = ["443","135","1433"]
             }
         """
         self.result = Runner(self.snippet).result
