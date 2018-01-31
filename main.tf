@@ -12,16 +12,15 @@ resource "aws_alb_listener" "TCP" {
   count             = "${length(var.TCPPorts)}"
 
   default_action {
-    target_group_arn = "${aws_alb_target_group.app.*.id}"
+    target_group_arn = "${aws_alb_target_group.app.id}"
     type             = "forward"
   }
 }
 
 resource "aws_alb_target_group" "app" {
-  port     = "${element(var.TCPPorts, count.index)}"
+  port     = 443
   protocol = "TCP"
   vpc_id   = "${var.vpc_id}"
-  count    = "${length(var.TCPPorts)}"
 }
 
 resource "aws_autoscaling_group" "app" {
